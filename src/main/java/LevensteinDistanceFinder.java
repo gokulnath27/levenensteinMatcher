@@ -102,6 +102,7 @@ public class LevensteinDistanceFinder {
                 case '~':
                 case '<':
                 case '>':
+                case '_':
                     stringBuffer.append(" ");
                     break;
                 default:
@@ -113,7 +114,7 @@ public class LevensteinDistanceFinder {
         return token;
     }
 
-    public int getValue(String a, String b) {
-        return getRatio(a, b, false);
+    public int getValue(String fieldsToBeMatched, String allFields) {
+        return getRatio(fieldsToBeMatched, allFields, false);
     }
 }

@@ -1,5 +1,8 @@
+import java.text.CharacterIterator;
+import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class MainClass {
@@ -9,9 +12,11 @@ public class MainClass {
         columnName.add("Full Name");
         columnName.add("First name");
         columnName.add("Auto");
+        columnName.add("Auto number");
+        columnName.add("phone number");
         columnName.add("phone");
         columnName.add("annual revenue");
-        columnName.add("revenue");
+
 
 
         fieldName.add("auto");
@@ -20,6 +25,7 @@ public class MainClass {
         fieldName.add("ph");
         fieldName.add("name");
         fieldName.add("full");
+        fieldName.add("pho");
         fieldName.add("pho no.");
         fieldName.add("phone no.");
         fieldName.add("phone number");
@@ -30,7 +36,9 @@ public class MainClass {
         fieldName.add("reven");
         fieldName.add("rev");
         fieldName.add("rvn");
-        columnName.sort(Comparator.comparing(String::length));
+        fieldName.add("fst");
+        fieldName.add("aut");
+        fieldName.add("aut_no.");
         FieldsMatchFinder again = new FieldsMatchFinder();
         List<String> matchedFields = again.findMatchedFields(columnName, fieldName);
         for(String s:matchedFields){
